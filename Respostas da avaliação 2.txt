@@ -1,0 +1,55 @@
+Respostas da avaliação 2
+
+    Questão 2:
+Principais vantagens da BNF:
+
+1. Clareza e legibilidade: A BNF utiliza uma sintaxe simples e intuitiva, baseada em regras de produção, que facilita a compreensão da estrutura sintática da linguagem. Isso torna mais fácil para os desenvolvedores entenderem e implementarem as regras de análise sintática.
+
+2. Expressividade: A BNF permite expressar a estrutura sintática de uma linguagem de forma concisa e abstrata. Ela permite especificar não apenas as regras básicas da gramática, mas também regras recursivas, precedência de operadores e outras construções complexas.
+
+3. Reusabilidade: A BNF permite a definição modular de gramáticas, o que possibilita a reutilização de regras em diferentes contextos. Isso é particularmente útil em compiladores que lidam com várias linguagens ou variantes da mesma linguagem.
+
+4. Verificação e validação: A notação BNF facilita a verificação e validação da sintaxe de uma linguagem. É possível analisar a gramática definida em BNF e identificar potenciais ambiguidades, erros ou inconsistências, o que auxilia no processo de desenvolvimento de compiladores mais robustos.
+
+5. Geração de analisadores sintáticos: A BNF é frequentemente utilizada como entrada para geradores automáticos de analisadores sintáticos. A partir da definição da gramática em BNF, é possível gerar código-fonte para analisadores sintáticos que ajudam na construção de compiladores.
+
+6. Documentação e ensino: A BNF é uma ferramenta valiosa para documentar e ensinar a sintaxe de linguagens de programação. Ela fornece uma descrição formal e precisa das construções sintáticas, facilitando o aprendizado e a consulta posterior.
+
+Em resumo, a notação BNF é uma ferramenta poderosa para descrever e entender a sintaxe de linguagens de programação. Ela oferece clareza, expressividade e reusabilidade, facilitando o desenvolvimento de compiladores e sistemas de análise sintática mais eficientes e confiáveis.
+
+    Questão 3:
+Para montar um analisador sintático ascendente, precisará das seguintes regras e comandos:
+
+Gramática em forma de BNF: Você deve ter uma gramática formalmente definida em forma de BNF que descreva a sintaxe da linguagem a ser analisada. A gramática deve ser livre de contexto e especificar as regras de produção da linguagem.
+
+Pilha: Utilize uma estrutura de dados do tipo pilha para armazenar os símbolos da gramática e realizar as operações de empilhar e desempilhar durante o processo de análise.
+
+Tabela de análise: Crie uma tabela de análise sintática que mapeie pares de símbolos não terminais e terminais para ações a serem executadas durante a análise. Essas ações podem incluir empilhar um novo símbolo, desempilhar símbolos, gerar código intermediário, entre outras.
+
+Tokens: Implemente um analisador léxico que identifique e forneça os tokens (unidades léxicas) da linguagem de entrada. Cada token deve ser associado a uma categoria, como identificadores, palavras-chave, operadores, etc.
+
+Processo de análise ascendente: Implemente o algoritmo de análise ascendente, como o algoritmo LR (Left-to-right, Rightmost derivation) ou o algoritmo LALR (Look-Ahead LR). Esse algoritmo será responsável por percorrer a entrada, realizar as ações apropriadas e manipular a pilha de acordo com as regras da gramática e a tabela de análise.
+
+Tratamento de erros: Implemente mecanismos de tratamento de erros para lidar com situações em que a entrada não está de acordo com a gramática. Isso pode incluir ações de recuperação de erro, como a inserção ou exclusão de tokens, ou a exibição de mensagens de erro.
+
+Geração de árvore sintática ou código intermediário: Durante o processo de análise, você pode construir uma árvore sintática ou gerar código intermediário que represente a estrutura da linguagem de entrada. Isso pode ser útil para etapas subsequentes do processo de compilação.
+
+
+    Questão 4:
+As funções de um analisador semântico em compiladores são responsáveis por realizar verificações e análises relacionadas ao significado e à semântica do código fonte. O objetivo principal do analisador semântico é garantir que o código fonte esteja correto e coerente do ponto de vista semântico, além de auxiliar na geração de informações adicionais para as fases subsequentes do processo de compilação. Abaixo estão algumas das principais funções desempenhadas por um analisador semântico:
+
+Verificação de tipos: O analisador semântico verifica a coerência dos tipos de dados utilizados nas expressões do código fonte, garantindo que as operações sejam realizadas corretamente. Isso inclui verificar a compatibilidade de tipos em atribuições, operações aritméticas, comparações, chamadas de função, entre outros.
+
+Declaração de variáveis: O analisador semântico verifica a correta declaração e uso de variáveis, assegurando que as variáveis sejam declaradas antes de serem utilizadas e que não ocorram redeclarações de variáveis no mesmo escopo.
+
+Verificação de escopo: O analisador semântico realiza a verificação de escopo, garantindo que as variáveis e identificadores estejam sendo utilizados dentro dos escopos corretos e que não ocorram conflitos entre nomes de variáveis em diferentes escopos.
+
+Resolução de referências: O analisador semântico realiza a resolução de referências, associando cada identificador utilizado no código fonte à sua declaração correspondente. Isso envolve verificar se os identificadores são válidos, se estão declarados corretamente e se estão sendo utilizados de forma consistente.
+
+Verificação de regras semânticas: O analisador semântico verifica se o código fonte está em conformidade com as regras semânticas definidas pela linguagem, como restrições de uso de certas palavras-chave, restrições de uso de operadores em determinados tipos de dados, entre outras.
+
+Geração de código intermediário: Em alguns compiladores, o analisador semântico também pode ser responsável por gerar código intermediário, que é uma representação intermediária do código fonte que facilita a otimização e a geração do código final.
+
+Detecção de erros semânticos: O analisador semântico é responsável por detectar e reportar erros semânticos encontrados no código fonte, como atribuições de tipos incompatíveis, uso de variáveis não declaradas, entre outros. Isso permite que o programador corrija os erros antes da próxima etapa do processo de compilação.
+
+Essas são algumas das principais funções desempenhadas por um analisador semântico em compiladores. O objetivo geral é garantir que o código fonte esteja semanticamente correto e fornecer informações relevantes para as etapas subsequentes do processo de compilação.
